@@ -32,7 +32,9 @@ Once you have cloned and installed the application, you can move on to the one-t
 1. Run the following command
    ```termai setup```
    you will see a screen like below choose the AI model you want to configure first
+   
    <img width="584" alt="Screenshot 2025-01-02 at 2 05 25 PM" src="https://github.com/user-attachments/assets/5b22f6b9-8782-4ec4-8f3a-30cebc9df0ce" />
+   
 2. After Choosing the Model you will be prompted to enter you API key once you complete that step you can start interacting with the models using the command mentioned invoking the AI Models
 <img width="586" alt="Screenshot 2025-01-02 at 2 05 53 PM" src="https://github.com/user-attachments/assets/e0fd131f-6488-4ce2-b7be-daba2d45e12a" />
 
