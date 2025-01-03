@@ -16,6 +16,10 @@ import (
 	"google.golang.org/api/option"
 )
 
+// invokeGemini represents the invoke gemini command
+// this is used to have a conversation with the gemini model
+// currently there is no history support and that will be added in the future
+// this invokation supports streaming
 var invokeGemini = &cobra.Command{
 	Use:   "gemini",
 	Short: "Invoke Gemini",
@@ -52,6 +56,9 @@ var invokeGemini = &cobra.Command{
 	},
 }
 
+// invokeOai represents the invoke OpenAI command
+// this is used to have a conversation with the OpenAI model
+// currently there is no history and streaming support and that will be added in the future
 var invokeOai = &cobra.Command{
 	Use:   "oai",
 	Short: "Invoke OpenAI Models",
@@ -104,7 +111,7 @@ var invokeOai = &cobra.Command{
 				if ok {
 					content, ok := message["content"].(string)
 					if ok {
-						fmt.Println("AI Response:", content)
+						fmt.Println(content)
 					}
 				}
 			}

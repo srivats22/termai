@@ -10,6 +10,9 @@ import (
 	"github.com/spf13/viper"
 )
 
+/*
+rootCmd represents the base command when called without any subcommands
+*/
 var rootCmd = &cobra.Command{
 	Use:   "termai",
 	Short: "A Terminal CLI for interacting with GenAI Models",
@@ -18,12 +21,15 @@ Currently the supported models are Gemini models and OpenAI models, they are als
 In the future there will be an option to choose the model that you want to use for response.`,
 }
 
+/*
+setup represents the logic that needs to run when the setup command is called
+*/
 var setup = &cobra.Command{
 	Use:   "setup",
 	Short: "Setup Termai",
-	Long: `Setup Termai. Choose the model you want to configure and provide the corresponding api key.
-You won't be able to use Termai without this set.
-All api keys are saved in the config file`,
+	Long: `Setup Termai. Choose the model you want to configure and provide the corresponding api key
+You won't be able to use Termai without this step
+All api keys are saved in the config file locally on device.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		aiProviderSelector := promptui.Select{
 			Label: "Select AI Provider",
@@ -75,6 +81,10 @@ All api keys are saved in the config file`,
 	},
 }
 
+// initConfig reads in config file and environment variables if set.
+// If the config file doesn't exist, it creates a new one with the default config values.
+// If the config file exists but there's an error reading it, it returns an error.
+// If the config file exists and there's no error reading it, it logs a message indicating that it's using the config file.
 func initConfig() error {
 	home, err := os.UserHomeDir()
 	if err != nil {
@@ -105,6 +115,8 @@ func initConfig() error {
 	return nil
 }
 
+// createConfigFile creates the config file if it doesn't exist, and sets the initial config
+// values.
 func createConfigFile() error {
 	home, err := os.UserHomeDir()
 	if err != nil {
@@ -136,6 +148,11 @@ func createConfigFile() error {
 	return nil
 }
 
+// Execute runs the root command and starts the application.
+//
+// It initializes the config with initConfig, and then runs the root command
+// with Execute. If there are any errors, it will print an error message and
+// exit with a code of 1.
 func Execute() {
 	if err := initConfig(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error initializing config: %v\n", err)
@@ -148,6 +165,7 @@ func Execute() {
 	}
 }
 
+// init registers the subcommands with the root command.
 func init() {
 	rootCmd.AddCommand(setup)
 	rootCmd.AddCommand(invokeGemini)
