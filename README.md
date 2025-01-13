@@ -23,7 +23,7 @@ Currently supports Gemini (1.5 Flash) and OpenAI (GPT-4o)
    termai
    ```
    this will generate an output that looks like the image below
-   <img width="586" alt="Screenshot 2025-01-02 at 2 02 00 PM" src="https://github.com/user-attachments/assets/1482fe0b-e5f0-43d7-a107-c9be5011ed1d" />
+   <img width="584" alt="Screenshot 2025-01-13 at 7 50 50 AM" src="https://github.com/user-attachments/assets/a7f06ec5-a72b-49bd-ba87-d36c923b5c4a" />
 
 # Initial Setup
 
@@ -33,10 +33,12 @@ Once you have cloned and installed the application, you can move on to the one-t
    ```termai setup```
    you will see a screen like below choose the AI model you want to configure first
    
-   <img width="584" alt="Screenshot 2025-01-02 at 2 05 25 PM" src="https://github.com/user-attachments/assets/5b22f6b9-8782-4ec4-8f3a-30cebc9df0ce" />
+   ![image](https://github.com/user-attachments/assets/2ebc6641-0b1d-4a0c-bd9a-155a100761e0)
+
    
 2. After Choosing the Model you will be prompted to enter you API key once you complete that step you can start interacting with the models using the command mentioned invoking the AI Models
-<img width="586" alt="Screenshot 2025-01-02 at 2 05 53 PM" src="https://github.com/user-attachments/assets/e0fd131f-6488-4ce2-b7be-daba2d45e12a" />
+![image](https://github.com/user-attachments/assets/23e1cd5f-7135-40d4-b8d9-91bcff4d70f2)
+
 
 # Invoking The AI Models
 1. To Invoke Gemini
