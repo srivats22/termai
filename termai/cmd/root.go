@@ -111,7 +111,7 @@ func initConfig() error {
 		}
 	}
 
-	fmt.Fprintln(os.Stderr, "Using config file:", viper.ConfigFileUsed())
+	fmt.Fprintln(os.Stderr, "Get API Key From Config File")
 	return nil
 }
 
